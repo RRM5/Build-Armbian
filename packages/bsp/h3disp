@@ -289,7 +289,7 @@ ParseOptions() {
 			;;
 		d|D)
 			# use HDMI-to-DVI converter
-			export DVIUsed=TRUE
+			export DVIUsed=FALSE
 			;;
 		m|M)
 			# The HDMI mode in question
@@ -369,7 +369,7 @@ ShowVideoModes() {
 	done
 	IFS=${OIFS}
 	if [ ! $clean ]; then
-		echo -e "\n Two examples:\n\n    '${BOLD}${0##*/}${NC} ${LGREEN}-m 1080p60 -d${NC}' (1920x1080@60Hz DVI)"
+		echo -e "\n Two examples:\n\n    '${BOLD}${0##*/}${NC} ${LGREEN}-m 1080p60 -d${NC}' (1920x1080@60Hz HDMI)"
 		echo -e "    '${BOLD}${0##*/}${NC} ${LGREEN}-m 720i${NC}' (1280x720@30Hz HDMI)\n"
 	fi
 } # ShowVideoModes
